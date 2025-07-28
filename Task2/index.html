@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Feedback Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Welcome to Our Feedback Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#feedback-form">Give Feedback</a></li>
+                <li><a href="#recent-messages">Recent Messages</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="feedback-form" class="card">
+            <h2>Your Feedback Matters!</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+                    <span class="error-message" id="userNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                    <span class="error-message" id="userEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userMessage">Message:</label>
+                    <textarea id="userMessage" name="userMessage" rows="6" required></textarea>
+                    <span class="error-message" id="userMessageError"></span>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section id="recent-messages" class="card">
+            <h2>Recent Feedback Messages</h2>
+            <ul id="messagesList">
+                <li>"Great website! Very intuitive." - Jane Doe (Pre-loaded example)</li>
+                <li>"Needs more content, but good start." - John Smith (Pre-loaded example)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Interactive Page. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
