@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Quiz & Joke App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button id="mode-toggle">🌙 Dark Mode</button>
+
+  <h1>Responsive Quiz & Joke App</h1>
+  <p>This site is responsive and uses JavaScript for interactivity.</p>
+
+  <!-- Quiz Section -->
+  <section class="box" id="quiz">
+    <h2 id="question">Loading Question...</h2>
+    <div id="options"></div>
+    <p id="quiz-result"></p>
+  </section>
+
+  <!-- Joke Section -->
+  <section class="box" id="joke-section">
+    <h2>Want to hear a joke?</h2>
+    <button onclick="fetchJoke()">Tell Me a Joke</button>
+    <p id="joke"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
