@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Project Implementation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Web Projects</h1>
+        <nav>
+            <button onclick="showSection('portfolio')">Portfolio</button>
+            <button onclick="showSection('todo')">To-Do List</button>
+            <button onclick="showSection('products')">Products</button>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section fade-in">
+        <h2>My Portfolio</h2>
+        <p class="intro">Hi, I'm <b>Damon Salvator</b> — an Electrical and Electronics Engineering student passionate about web development and IoT.</p>
+        <div class="card-container">
+            <div class="card">
+                <h3>Smart Farm Irrigation System</h3>
+                <p>Automated irrigation using IoT sensors and WiFi modules to save water.</p>
+            </div>
+            <div class="card">
+                <h3>Mini Job Portal</h3>
+                <p>A Django-based portal to connect job seekers and recruiters efficiently.</p>
+            </div>
+        </div>
+        <p class="contact">📧 Email: example@mail.com</p>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo" class="content-section fade-in" style="display:none;">
+        <h2>To-Do List</h2>
+        <div class="todo-container">
+            <input type="text" id="taskInput" placeholder="Add new task">
+            <button class="add-btn" onclick="addTask()">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="content-section fade-in" style="display:none;">
+        <h2>Product Listing</h2>
+        <div class="filters">
+            <select id="filter" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+            </select>
+
+            <select id="sort" onchange="sortProducts()">
+                <option value="price">By Price</option>
+                <option value="rating">By Rating</option>
+            </select>
+        </div>
+        <div id="productList" class="card-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
